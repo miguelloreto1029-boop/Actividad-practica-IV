@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.foto-contenedor {
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+    background-color: #ffffff;
+}
+
+.foto-contenedor img {
+    max-width: 100%;
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, filter 0.4s ease, opacity 0.8s ease;
+    opacity: 0;
+}
+
+.foto-contenedor img.cargada {
+    opacity: 1;
+}
+
+.foto-contenedor img.escala-de-grises {
+    filter: grayscale(100%);
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background-color: #ffffff;
+}
+
+main h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+main p {
+    margin-bottom: 15px;
+    text-align: justify;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+main p.resaltado {
+    background-color: #fff3cd;
+}
+
+#mensaje-flotante {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+#btn-arriba {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+#btn-arriba:hover {
+    background-color: #34495e;
+}
